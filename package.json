@@ -1,0 +1,29 @@
+{
+  "name": "photo",
+  "version": "1.0.0",
+  "description": "A server for phonot management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesen0823/photo_server.git"
+  },
+  "keywords": [
+    "photoserver",
+    "nodejs"
+  ],
+  "author": "Jesen0823",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesen0823/photo_server/issues"
+  },
+  "homepage": "https://github.com/Jesen0823/photo_server#readme",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "multer": "^2.1.1",
+    "mysql": "^2.18.1"
+  }
+}

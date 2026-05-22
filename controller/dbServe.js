@@ -4,6 +4,7 @@ const MKDir = require("../lib/mkdir");
 // 新建walls
 exports.insertWall = async (req, res) => {
   let data = req.body;
+  console.log("insertWall,body:", data);
   await dbModel
     .insertWall([
       data.type,

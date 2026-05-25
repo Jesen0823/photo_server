@@ -130,3 +130,36 @@ exports.findCommentPage = async (req, res) => {
       });
     });
 };
+
+// 反馈数量查询
+exports.feedbackCount = async (req, res) => {
+  let data = req.body;
+  await dbModel.feedbackCount(data.wid, data.type).then((result) => {
+    res.send({
+      code: 200,
+      message: result,
+    });
+  });
+};
+
+// 评论数量查询
+exports.commentCount = async (req, res) => {
+  let data = req.body;
+  await dbModel.findCommentPage(data.wid).then((result) => {
+    res.send({
+      code: 200,
+      message: result,
+    });
+  });
+};
+
+// 点赞数量
+exports.likeCount = async (req, res) => {
+  let data = req.body;
+  await dbModel.findCommentPage(data.wid, data.uid).then((result) => {
+    res.send({
+      code: 200,
+      message: result,
+    });
+  });
+};

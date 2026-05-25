@@ -46,4 +46,13 @@ module.exports = function (app) {
   app.post("/findCommentPage", (req, res) => {
     controller.findCommentPage(req, res);
   });
+
+  // 获取用户ip
+  app.post("/signip", (req, res) => {
+    const ip = req.ip;
+    res.send({
+      code: 200,
+      ip: ip,
+    });
+  });
 };
